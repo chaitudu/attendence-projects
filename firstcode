@@ -1,0 +1,13 @@
+f = open("students.txt","r")
+lines = f.readlines()
+f.close()
+
+g = open("chaitanya2.txt","a")
+date = input("Input date\t")
+g.writelines("\n\n"+date)
+for student in lines:
+    student = student.replace("\n","")
+    is_present = input("Is "+student+" Present\t")
+    g.writelines("\n"+student+"\t\t"+is_present)
+
+g.close()
